@@ -1,4 +1,3 @@
-import os
 import json
 import traceback
 import pandas as pd
@@ -8,7 +7,7 @@ from src.mcqgenerator.logger import logging
 import streamlit as st
 from langchain.callbacks import get_openai_callback
 
-with open(".\mcqgen\Response.json","r") as file:
+with open("D:\mcqgen\Response.json","r") as file:
     RESPONSE_JSON = json.load(file)
     
 st.title('MCQs Creator Using Your data')
