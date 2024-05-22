@@ -3,7 +3,9 @@ Name: MCQGenrator
 Version: 0.0.1
 Author: KRSNA
 Author-email: krisnabadde@gmail.com
-Requires-Dist: openai
+Requires-Dist: google-generativeai
+Requires-Dist: langchain-google-genai
+Requires-Dist: pillow
 Requires-Dist: langchain
 Requires-Dist: streamlit
 Requires-Dist: python-dotenv
