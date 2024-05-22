@@ -1,7 +1,6 @@
 import os 
 '---------------------------------------------------------------------------------------------------------'
 from langchain_google_genai import ChatGoogleGenerativeAI
-import google.generativeai as genai
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
@@ -9,10 +8,9 @@ from dotenv import load_dotenv
 '---------------------------------------------------------------------------------------------------------'
 
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("google_api_key")
+os.environ['GOOGLE_API_KEY'] = os.getenv("GOOGLE_API_KEY")
 
-genai.configure(api_key=GOOGLE_API_KEY)
-llm = genai.ChatGoogleGenerativeAI('gemini-pro')
+llm = ChatGoogleGenerativeAI(model='gemini-pro')
 '---------------------------------------------------------------------------------------------------------'
 
 TEMPLATE="""
